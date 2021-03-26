@@ -1,0 +1,34 @@
+<p>content works!</p>
+
+
+<html>
+      <style>
+          table,th,td{
+              border: 1px solid black;
+              border-collapse: collapse;
+              padding: 5px;
+          }
+  
+      </style>
+  <table border="1" style="width: 100;">
+  <thead>
+      <tr style="background-color: rgb(8, 218, 255);">
+          <th>Id</th>
+          <th>Name</th>
+          <th>Password</th>
+          <th>Email</th>
+          <th>Mobile</th>
+          
+        
+  
+      </tr>
+    
+        <tr style="background-color: rgb(255, 255, 255);" *ngFor=" let arr of userlist ">
+          <td>321321321321</td>
+          <td>gokul</td>
+          <td>11111</td>
+          <td>gokulkm@gmail.com</td>
+          <td>8606581245</td>
+          </tr>
+
+      <button (click)="logout()">logout</button>

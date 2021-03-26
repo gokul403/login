@@ -1,0 +1,70 @@
+<p>signup works!</p>
+
+
+<form action=""  >
+    <div>
+      <label for="">Name</label>
+    </div>
+    <input type="text" class="form-control"  name="Name" [(ngModel)]=model.Name>
+    <div>
+      <label for="">Password</label>
+    </div>
+    <input type="password" class="form-control"  name="Password" [(ngModel)]=model.Password >
+    <div>
+      <label for="">Email</label>
+    </div>
+    <input type="email" class="form-control"  name="Email" [(ngModel)]=model.Email >
+    <div>
+      <label for="">Mobile</label>
+    </div>
+    <input type="tel" class="form-control"  name="Mobile" [(ngModel)]=model.Mobile>
+      <button class="btn btn-success" (click)="save()" >Submit</button><br>
+      <html>
+        <style>
+            table,th,td{
+                border: 1px solid black;
+                border-collapse: collapse;
+                padding: 5px;
+            }
+    
+        </style>
+    <table border="1" style="width: 100;">
+    <thead>
+        <tr style="background-color: rgb(8, 218, 255);">
+            <th>Id</th>
+            <th>Name</th>
+            <th>Password</th>
+            <th>Email</th>
+            <th>Mobile</th>
+            
+          
+    
+        </tr>
+      
+          <tr style="background-color: rgb(255, 255, 255);" *ngFor=" let arr of signlist ">
+            <td>{{arr.id}}</td>
+            <td>{{arr.Name}}</td>
+            <td>{{arr.Password}}</td>
+            <td>{{arr.Email}}</td>
+            <td>{{arr.Mobile}}</td>
+
+            <td>
+              <button class="btn btn-primary" (click)="edit(arr)">Edit</button></td>
+              <td>
+                <button class="btn-danger" (click)="delete(arr)">Delete</button>
+              </td>
+              
+            
+          
+
+    
+          </tr>
+        </thead>
+      </table>
+
+  
+     
+  </html>
+
+
+     </form>
